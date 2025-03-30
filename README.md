@@ -25,13 +25,14 @@ npm init
 
 Para las pruebas en la interfaz de usuario (UI), necesitas instalar la siguiente dependencia para la generación de datos ramdon en las pruebas de Registro de un Nuevo usuario:
 
+```bash
+npm install @faker-js/faker --save-dev
+```
+
 ## Ejecución de los Tests
 
 #### Para ejecutar los tests de Cypress en la interfaz de usuario:
 
-```bash
-npm install @faker-js/faker --save-dev
-```
 
 Navegá a la carpeta del proyecto \ecommerce y ejecutá los tests de Cypress en la UI:
 
