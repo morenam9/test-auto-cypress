@@ -2,59 +2,85 @@
 
 Este repositorio contiene pruebas automatizadas implementadas con Cypress para probar la UI de la aplicación web https://automationexercise.com/ y pruebas de API con Echo Server https://echo-serv.tbxnet.com/explorer/#/QA/get_qa_test1.
 
+# Instalación de Dependencias para ejecutar Pruebas Automatizadas usando Cypress.
+
+Este documento describe los pasos necesarios para instalar Cypress y todas las dependencias requeridas para ejecutar las pruebas automatizadas de este proyecto.
+
+## Requisitos Previos
+
+Antes de instalar Cypress, asegúrate de tener instalado lo siguiente:
+
+- [Node.js](https://nodejs.org/) (versión 12 o superior)
+- Un gestor de paquetes como npm
+- Git para clonar el repositorio
+
+Puedes verificar si Node.js y npm están instalados ejecutando los siguientes comandos en la terminal:
+
+```sh
+node -v  # Verifica la versión de Node.js
+npm -v   # Verifica la versión de npm
+```
+
 ## Clonar el Repositorio
 
-Para clonar el repositorio, usá el siguiente comando en la terminal:
+Para obtener el código fuente del proyecto, clona el repositorio ejecutando:
 
 ```bash
 git clone https://github.com/morenam9/test-auto-cypress.git
-
+cd test-auto-cypress
 ```
+
 ## Instalación de Dependencias
 
-Navegar a la carpeta del proyecto e instalar las siguientes dependencias con npm:
+Ejecuta el siguiente comando para instalar todas las dependencias necesarias:
 
-```bash
-cd test-auto-cypress
+```sh
 npm install
-npm init 
-
 ```
 
-### Dependencia para la UI
+Si estás inicializando el proyecto por primera vez, puedes ejecutar:
 
-Para las pruebas en la interfaz de usuario (UI), necesitas instalar la siguiente dependencia para la generación de datos ramdon en las pruebas de Registro de un Nuevo usuario:
+```sh
+npm init -y
+```
 
-```bash
+### Instalación de Cypress
+
+Para instalar Cypress como dependencia de desarrollo, usa:
+
+```sh
+npm install cypress --save-dev
+```
+
+
+### Dependencias Adicionales
+
+Para las pruebas en la interfaz de usuario (UI), necesitas instalar Faker.js para la generación de datos aleatorios en los tests de registro de usuarios:
+
+```sh
 npm install @faker-js/faker --save-dev
 ```
 
 ## Ejecución de los Tests
 
-#### Para ejecutar los tests de Cypress en la interfaz de usuario:
-
-
-Navegá a la carpeta del proyecto \ecommerce y ejecutá los tests de Cypress en la UI:
-
+### Para ejecutar los tests en la UI test-auto-cypress\ecommerce:
 
 ```bash
 npx cypress open
-
 ```
 
-#### Para ejecutar los tests en la API:
+Esto abrirá la interfaz gráfica de Cypress, donde podrás seleccionar y ejecutar los tests disponibles.
 
-Navegá a la carpeta del proyecto \API_Echo_Server y ejecutá los tests de Cypress en la API:
+### Para ejecutar los tests en la API test-auto-cypress\API_Echo_Server:
 
 ```bash
 npx cypress open
-
 ```
 
 
 # Resumen de los Tests de UI  
 
-Esta suite de pruebas automatizadas en Cypress valida el proceso de registro y login en un sitio de e-commerce.  
+Esta suite de pruebas automatizadas en Cypress valida el proceso de registro y login en un sitio de ecommerce.  
 
 ## Registro de Nuevo Usuario  
 
